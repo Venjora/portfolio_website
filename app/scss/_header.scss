@@ -12,12 +12,29 @@
   &__menu {
     > span {
       display: block;
-      width: 26px;
+      width: 35px;
       height: 4px;
       background-color: $blueBell;
 
       &:not(:last-child) {
-        margin-bottom: 3px;
+        margin-bottom: 4px;
+      }
+
+      &.line {
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    &.is-active {
+      > span:first-child {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      > span:nth-child(2) {
+      }
+      > span:last-child {
+        opacity: 0;
+        transform: translateX(100%);
       }
     }
   }
