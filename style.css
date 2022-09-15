@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-/* 
-#051622 : black
-#1BA098 : torquoise
-#DEB992 : pale
-*/
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -97,4 +92,4 @@ a:hover {
 }
 .header__links a:hover::before {
   opacity: 1;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
