@@ -26,12 +26,15 @@
     &:hover {
       > span:first-child {
         transform: rotate(0deg) translateY(-3px) translateX(0);
+        -webkit-transform: rotate(0deg) translateY(-3px) translateX(0);
       }
       > span:nth-child(2) {
         transform: translate(20%);
+        -webkit-transform: translate(20%);
       }
       > span:last-child {
         transform: rotate(0deg) translateY(3px) translateX(0);
+        -webkit-transform: rotate(0deg) translateY(3px) translateX(0);
       }
     }
   }
@@ -69,15 +72,18 @@
         // opacity: 0;
         // transform: translateX(-100%);
         transform: rotate(45deg) translateY(0) translateX(0);
+        -webkit-transform: rotate(45deg) translateY(0) translateX(0);
       }
       > span:nth-child(2) {
         opacity: 0;
         transform: translate(100%);
+        -webkit-transform: translate(100%);
       }
       > span:last-child {
         // opacity: 0;
         // transform: translateX(100%);
         transform: rotate(-45deg) translateY(0) translateX(0);
+        -webkit-transform: rotate(-45deg) translateY(0) translateX(0);
       }
     }
 
