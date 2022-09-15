@@ -1,44 +1,40 @@
 .header {
   nav {
-    padding: 1.0625rem 1.5rem;
+    padding: 1.3rem 3.5rem;
   }
   &__logo {
-    margin-left: 20px;
+    margin-left: -0.9375rem;
     > img {
-      height: 2.8125rem;
+      height: 3.125rem;
     }
   }
 
   &__menu {
     > span {
       display: block;
-      width: 35px;
+      width: 34px;
       height: 4px;
       background-color: $blueBell;
+      transition: all 0.3s ease-in-out;
+      transform-origin: 5.7px 2.5px;
 
       &:not(:last-child) {
         margin-bottom: 4px;
       }
-
-      &.line {
-        transition: all 0.3s ease-in-out;
-      }
     }
 
-    &.is-active {
+    &:hover {
       > span:first-child {
-        opacity: 0;
-        transform: translateX(-100%);
+        transform: rotate(0deg) translateY(-3px) translateX(0);
       }
       > span:nth-child(2) {
+        transform: translate(20%);
       }
       > span:last-child {
-        opacity: 0;
-        transform: translateX(100%);
+        transform: rotate(0deg) translateY(3px) translateX(0);
       }
     }
   }
-
   &__links {
     a {
       position: relative;
@@ -63,6 +59,36 @@
           opacity: 1;
         }
       }
+    }
+  }
+
+  //Hamburger when active styles
+  &.is-active {
+    .header__menu {
+      > span:first-child {
+        // opacity: 0;
+        // transform: translateX(-100%);
+        transform: rotate(45deg) translateY(0) translateX(0);
+      }
+      > span:nth-child(2) {
+        opacity: 0;
+        transform: translate(100%);
+      }
+      > span:last-child {
+        // opacity: 0;
+        // transform: translateX(100%);
+        transform: rotate(-45deg) translateY(0) translateX(0);
+      }
+    }
+
+    //overlay
+    .overlay {
+      background-image: linear-gradient($blueBell, transparent);
+      position: fixed;
+      top: 6rem;
+      right: 0rem;
+      bottom: 0rem;
+      left: 0rem;
     }
   }
 }
