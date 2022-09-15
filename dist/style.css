@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* 
+#051622 : black
+#1BA098 : torquoise
+#DEB992 : pale
+*/
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  color: #000807;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: #000807;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header nav {
+  padding: 1.0625rem 1.5rem;
+}
+.header__logo {
+  margin-left: 20px;
+}
+.header__logo > img {
+  height: 2.8125rem;
+}
+.header__menu > span {
+  display: block;
+  width: 26px;
+  height: 4px;
+  background-color: #9395d3;
+}
+.header__menu > span:not(:last-child) {
+  margin-bottom: 3px;
+}
+.header__links a {
+  position: relative;
+  font-size: 1.25rem;
+  margin-right: 40px;
+}
+.header__links a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4px;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+  background: #9395d3;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+.header__links a:hover {
+  color: #9395d3;
+  transition: color 300ms ease-in-out;
+}
+.header__links a:hover::before {
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */

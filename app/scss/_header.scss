@@ -1,0 +1,51 @@
+.header {
+  nav {
+    padding: 1.0625rem 1.5rem;
+  }
+  &__logo {
+    margin-left: 20px;
+    > img {
+      height: 2.8125rem;
+    }
+  }
+
+  &__menu {
+    > span {
+      display: block;
+      width: 26px;
+      height: 4px;
+      background-color: $blueBell;
+
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  &__links {
+    a {
+      position: relative;
+      font-size: $font-med;
+      margin-right: 40px;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 4px;
+        left: 0;
+        right: 0;
+        bottom: -15px;
+        background: $blueBell;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+      &:hover {
+        color: $blueBell;
+        transition: color 300ms ease-in-out;
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
