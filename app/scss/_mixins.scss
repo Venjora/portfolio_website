@@ -25,13 +25,35 @@ $breakpoints-down: (
     @content;
   }
 }
-// @media (max-width: 389rem) {
-//   .header {
-//     .flex {
-//       padding: 1rem 1.5rem;
-//     }
-//     .header__logo img {
-//       height: 2.5rem;
-//     }
-//   }
-// }
+//change size of the logo
+@media screen and (min-width: 24.5rem) {
+  .header {
+    nav {
+      padding: 1.3rem 2.5rem;
+      height: $nav-height;
+    }
+    &__logo {
+      > img {
+        height: 2.3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 24.4375rem) {
+  .header {
+    nav {
+      padding: 0.3rem 2.5rem;
+      height: 4.7rem;
+    }
+    &__logo {
+      margin-left: -1.3rem;
+      > img {
+        height: 2rem;
+      }
+    }
+    &__toggle {
+      margin-right: -1rem;
+    }
+  }
+}
