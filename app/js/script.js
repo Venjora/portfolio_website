@@ -6,14 +6,10 @@ hamburger.addEventListener("click", function () {
 
   if (header.classList.contains("is-active")) {
     header.classList.remove("is-active");
-    overlay.classList.add("fade-out");
-    overlay.classList.remove("fade-in");
     document.getElementById("sideNav").style.width = "0px";
   } else {
     //open hamburger menu
     header.classList.add("is-active");
-    overlay.classList.add("fade-in");
-    overlay.classList.remove("fade-out");
     document.getElementById("sideNav").style.width = "250px";
   }
 });

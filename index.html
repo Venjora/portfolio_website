@@ -14,42 +14,60 @@
 </head>
 
 <body id="main">
+	<!-- Header -->
 	<header class="header">
-		<div class="overlay"></div>
+		<!-- Navigation Bar-->
 		<nav class="flex flex-jc-sb flex-ai-c">
 			<a href="/" class="header__logo">
-				<img src="./img/raven.png" title="venjora logo"">
+				<img src="./img/raven.png" alt="venjora logo">
 			</a>
 			<a href=" #" id="hamburger" class="header__toggle hide-for-desktop">
 				<span></span>
 				<span></span>
 				<span></span>
 			</a>
-
 			<div class="header__links hide-for-mobile">
 				<a href="#">About</a>
 				<a href="#">Work</a>
+				<a href="#">Experience</a>
 				<a href="#">Contact</a>
 				<a class="resume-btn" href="#" target="_blank">Resume</a>
 			</div>
 		</nav>
+		<!-- Push of Navigation -->
 		<div class="header__menu" id="sideNav">
-			<a href="">About</a>
+			<a href="#home">About</a>
 			<a href="">Work</a>
+			<a href="">Experience</a>
 			<a href="">Contact</a>
 			<a href="">Resume</a>
 		</div>
 	</header>
-	<div class="main">Developing writers can often benefit from examining an essay, a paragraph, or even a sentence to
-		determine what makes it
-		effective. On the following pages are several paragraphs for you to evaluate on your own, along with the Writing
-		Center's explanation.
+	<!-- Main Content -->
+	<div class="content">
+		<main>
+			<section class="flex flex-ai-c flex-jc-c flex-ai-flxstrt flex-dir-col intro" id="home">
+				<h2>Hi there! I'm</h2>
+				<h1 class="main-heading"><strong>Raven</strong> <strong>Esguerra,</strong></h1>
+				<h3>
+					<p>An aspiring </p><strong>Web Developer</strong>.
+				</h3>
+				<p class="intro__desc">I'm a fresh <a href="https://www.douglascollege.ca/program/dpcsti"
+						id="course">CSIS</a>
+					graduate from
+					Douglas College, BC, CA. Currently,
+					I'm<br>
+					looking for a job or an opportunity to learn more skills & experiences<br>
+					in the IT industry.
+				</p>
 
-		Note: These passages are excerpted from actual student papers and retain the original wording. Some of the
-		sentences are
-		imperfect, but we have chosen these passages to highlight areas in which the author was successful.
-
-		Thanks to the students who provided their writing fo</div>
+			</section>
+			<section class="flex flex-ai-flxstrt flex-dir-col about">
+				<img src="./img/raven.png" alt="venjora logo">
+			</section>
+		</main>
+	</div>
+	<!-- Footer -->
 	<footer></footer>
 </body>
 <script src="./app/js/script.js"></script>

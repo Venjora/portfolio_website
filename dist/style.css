@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@media screen and (min-width: 24.5rem) {
+@media screen and (min-width: 64rem) {
   .header nav {
     padding: 1.3rem 2.5rem;
-    height: 6.25rem;
+    height: 4.4rem;
   }
   .header__logo > img {
     height: 2.3rem;
   }
+  main {
+    padding: 0px 9rem;
+  }
 }
-@media screen and (max-width: 24.4375rem) {
+@media screen and (max-width: 63.9375rem) {
   .header nav {
     padding: 0.3rem 2.5rem;
     height: 4.7rem;
@@ -21,6 +24,9 @@
   }
   .header__toggle {
     margin-right: -1rem;
+  }
+  main {
+    padding: 0px 2.375rem;
   }
 }
 @-webkit-keyframes fade-in {
@@ -101,21 +107,31 @@ html {
   box-sizing: inherit;
 }
 
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9395d3;
+  border-radius: 0.625rem;
+  border: 3px solid #9395d3;
+}
+
 body {
   margin: 0;
-  overflow: hidden;
   padding: 0;
   line-height: 1.3;
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
-  color: #000807;
+  background-color: #303a52;
+  color: #9395d3;
 }
 
 a,
 a:visited,
 a:hover {
   text-decoration: none;
-  color: #000807;
+  color: #9395d3;
 }
 
 .flex {
@@ -130,6 +146,26 @@ a:hover {
 .flex-ai-c {
   align-items: center;
 }
+.flex-ai-flxstrt {
+  align-items: flex-start;
+}
+.flex-dir-col {
+  flex-direction: column;
+}
+
+main {
+  display: block;
+  margin: 0px auto;
+  max-width: 100rem;
+  min-height: 100vh;
+}
+
+section {
+  cursor: pointer;
+  margin: 0px auto;
+  max-width: 62.5rem;
+  padding: 100px 0px;
+}
 
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
@@ -143,6 +179,12 @@ a:hover {
   }
 }
 
+.header nav {
+  position: absolute;
+  width: 100%;
+  background-color: #303a52;
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
 .header__toggle > span {
   display: block;
   width: 34px;
@@ -161,6 +203,7 @@ a:hover {
 .header__toggle:hover > span:nth-child(2) {
   transform: translate(-20%);
   -webkit-transform: translate(-20%);
+  background-color: #fc85ae;
 }
 .header__toggle:hover > span:last-child {
   transform: rotate(0deg) translateY(3px) translateX(0);
@@ -180,13 +223,12 @@ a:hover {
   left: 0;
   right: 0;
   bottom: -15px;
-  background: #9395d3;
+  background: #fc85ae;
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 }
 .header__links a:hover:not(.resume-btn) {
-  color: #9395d3;
-  transition: color 300ms ease-in-out;
+  color: #fc85ae;
 }
 .header__links a:hover:not(.resume-btn)::before {
   opacity: 1;
@@ -198,13 +240,16 @@ a:hover {
   padding: 0.5rem 1rem;
   color: #9395d3;
   line-height: 1;
-  background-color: #fbf9ff;
+  background-color: #303a52;
 }
 .header__links .resume-btn:hover {
   color: #fbf9ff;
-  background-color: #b3b7ee;
+  background-color: #fc85ae;
   border: 3px solid transparent;
   transition: background-color 300ms ease-in;
+}
+.header__links .resume-btn::before {
+  content: none;
 }
 .header__menu {
   height: 100%;
@@ -213,12 +258,12 @@ a:hover {
   z-index: 0;
   top: 0;
   right: 0;
-  background-color: #9395d3;
+  background-color: #fc85ae;
   overflow-x: hidden;
   padding-top: 120px;
   transition: 0.5s;
 }
-.header__menu > a {
+.header__menu a {
   padding: 8px 8px 20px 32px;
   text-decoration: none;
   font-size: 23px;
@@ -244,4 +289,50 @@ a:hover {
 .header.is-active .header__toggle > span:last-child {
   transform: rotate(-45deg) translateY(0) translateX(0);
   -webkit-transform: rotate(-45deg) translateY(0) translateX(0);
+}
+
+.intro {
+  height: 100vh;
+}
+.intro .main-heading {
+  margin: 0px;
+  font-size: clamp(2rem, 8vw, 4rem);
+}
+.intro h1 {
+  font-weight: 400;
+  color: #fbf9ff;
+}
+.intro h2 {
+  margin: 0px;
+  font-size: clamp(1rem, 5vw, 1.25rem);
+  color: #fc85ae;
+}
+.intro h3 {
+  margin: 0px;
+  font-size: clamp(1.7rem, 8vw, 3.7rem);
+  color: #9395d3;
+}
+.intro h3 p {
+  display: inline;
+  opacity: 0.5;
+}
+.intro h3 strong {
+  color: #fc85ae;
+  transition: all 200ms ease-in-out;
+}
+.intro h3 strong:hover {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.intro__desc {
+  font-size: clamp(0.75rem, 8vw, 1.125rem);
+  text-decoration: none;
+  opacity: 0.7;
+}
+.intro #course {
+  color: #fc85ae;
+}
+
+.about {
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */

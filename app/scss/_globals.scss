@@ -10,21 +10,31 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
+// Scroll Bar
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $blueBell;
+  border-radius: 0.625rem;
+  border: 3px solid $blueBell;
+}
 body {
   margin: 0;
-  overflow: hidden;
+
+  // overflow: hidden;
   padding: 0;
   line-height: 1.3;
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
-  color: $richBlack;
+  background-color: $jet;
+  color: $blueBell;
 }
 a,
 a:visited,
 a:hover {
   text-decoration: none;
-  color: $richBlack;
+  color: $blueBell;
 }
 // Flexbox
 .flex {
@@ -41,6 +51,28 @@ a:hover {
   &-ai-c {
     align-items: center;
   }
+  &-ai-flxstrt {
+    align-items: flex-start;
+  }
+  &-dir-col {
+    flex-direction: column;
+  }
+}
+
+// Main
+main {
+  display: block;
+  margin: 0px auto;
+  max-width: 100rem;
+  min-height: 100vh;
+}
+
+// Section
+section {
+  cursor: pointer;
+  margin: 0px auto;
+  max-width: 62.5rem;
+  padding: 100px 0px;
 }
 // Visibility
 .hide-for-mobile {
