@@ -20,7 +20,6 @@
     color: $blueBell;
     p {
       display: inline;
-      opacity: 0.5;
     }
     strong {
       color: $peach;
@@ -34,7 +33,6 @@
   &__desc {
     font-size: clamp($font-xxs, 8vw, $font-med);
     text-decoration: none;
-    opacity: 0.7;
   }
   #course {
     color: $peach;

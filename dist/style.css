@@ -314,7 +314,6 @@ section {
 }
 .intro h3 p {
   display: inline;
-  opacity: 0.5;
 }
 .intro h3 strong {
   color: #fc85ae;
@@ -327,7 +326,6 @@ section {
 .intro__desc {
   font-size: clamp(0.75rem, 8vw, 1.125rem);
   text-decoration: none;
-  opacity: 0.7;
 }
 .intro #course {
   color: #fc85ae;
