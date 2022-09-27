@@ -27,20 +27,25 @@
 				<span></span>
 			</a>
 			<div class="header__links hide-for-mobile">
-				<a href="#">About</a>
-				<a href="#">Work</a>
-				<a href="#">Experience</a>
-				<a href="#">Contact</a>
+				<a href="#about">About</a>
+				<a href="#work">Work</a>
+				<a href="#experience">Experience</a>
+				<a href="#contact">Contact</a>
 				<a class="resume-btn" href="#" target="_blank">Resume</a>
 			</div>
 		</nav>
 		<!-- Push of Navigation -->
 		<div class="header__menu" id="sideNav">
-			<a href="#home">About</a>
-			<a href="">Work</a>
-			<a href="">Experience</a>
-			<a href="">Contact</a>
-			<a href="">Resume</a>
+			<a href="#" class="header__activeToggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+			<a href="#about">About</a>
+			<a href="#work">Work</a>
+			<a href="#experience">Experience</a>
+			<a href="#contact">Contact</a>
+			<a href="#">Resume</a>
 		</div>
 	</header>
 	<!-- Main Content -->
@@ -62,9 +67,21 @@
 				</p>
 
 			</section>
-			<section class="flex flex-ai-flxstrt flex-dir-col about">
-				<img src="./img/raven.png" alt="venjora logo">
+			<section class="flex flex-ai-flxstrt flex-dir-col about" id="about">
+				<h2 class="sub-heading">About Me</h2>
+				<div class="about__desc"></div>
 			</section>
+			<section class="flex flex-ai-flxstrt flex-dir-col work" id="work">
+				<h2 class="sub-heading">Work</h2>
+				<div class="work__desc"></div>
+
+			</section>
+			<section class="flex flex-ai-flxstrt flex-dir-col exp" id="exp">
+				<h2 class="sub-heading">Experience</h2>
+				<div class="exp__desc"></div>
+
+			</section>
+
 		</main>
 	</div>
 	<!-- Footer -->

@@ -93,24 +93,42 @@
     right: 0;
     background-color: $peach;
     overflow-x: hidden;
-    padding-top: 120px;
+    padding-top: 100px;
     transition: 0.5s;
 
-    a {
-      padding: 8px 8px 20px 32px;
+    a:not(.header__activeToggle) {
+      padding: 20px 8px 20px 20px;
       text-decoration: none;
       font-size: 23px;
       color: $ghostWhite;
       display: block;
       transition: 0.3s;
+      &:hover {
+        border-radius: 10% 0% 0% 10%;
+        transition: all 0.1s ease-in-out;
+        background-color: $blueBell;
+      }
     }
   }
   //Hamburger when active styles
   &.is-active {
-    .header__toggle {
-      z-index: 1;
-      > span {
+    .header__activeToggle {
+      top: -70px;
+      margin: 0px;
+      position: relative;
+      left: 200px;
+
+      span {
         background-color: $ghostWhite;
+        display: block;
+        position: relative;
+        width: 34px;
+        height: 4px;
+        transition: all 0.3s ease-in-out;
+        transform-origin: 5.7px 2.5px;
+        &:not(:last-child) {
+          margin-bottom: 4px;
+        }
       }
       > span:first-child {
         transform: rotate(45deg) translateY(0) translateX(0);

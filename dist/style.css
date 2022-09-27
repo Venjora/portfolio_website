@@ -167,6 +167,22 @@ section {
   padding: 100px 0px;
 }
 
+.sub-heading {
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  color: #fbf9ff;
+  display: flex;
+}
+.sub-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: clamp(1rem, 4vw, 1.2rem);
+  height: 1px;
+  width: clamp(10rem, 40vw, 20rem);
+  background-color: #fc85ae;
+  margin-left: clamp(2rem, 4vw, 3rem);
+}
+
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
     display: none;
@@ -260,33 +276,50 @@ section {
   right: 0;
   background-color: #fc85ae;
   overflow-x: hidden;
-  padding-top: 120px;
+  padding-top: 100px;
   transition: 0.5s;
 }
-.header__menu a {
-  padding: 8px 8px 20px 32px;
+.header__menu a:not(.header__activeToggle) {
+  padding: 20px 8px 20px 20px;
   text-decoration: none;
   font-size: 23px;
   color: #fbf9ff;
   display: block;
   transition: 0.3s;
 }
-.header.is-active .header__toggle {
-  z-index: 1;
+.header__menu a:not(.header__activeToggle):hover {
+  border-radius: 10% 0% 0% 10%;
+  transition: all 0.1s ease-in-out;
+  background-color: #9395d3;
 }
-.header.is-active .header__toggle > span {
+.header.is-active .header__activeToggle {
+  top: -70px;
+  margin: 0px;
+  position: relative;
+  left: 200px;
+}
+.header.is-active .header__activeToggle span {
   background-color: #fbf9ff;
+  display: block;
+  position: relative;
+  width: 34px;
+  height: 4px;
+  transition: all 0.3s ease-in-out;
+  transform-origin: 5.7px 2.5px;
 }
-.header.is-active .header__toggle > span:first-child {
+.header.is-active .header__activeToggle span:not(:last-child) {
+  margin-bottom: 4px;
+}
+.header.is-active .header__activeToggle > span:first-child {
   transform: rotate(45deg) translateY(0) translateX(0);
   -webkit-transform: rotate(45deg) translateY(0) translateX(0);
 }
-.header.is-active .header__toggle > span:nth-child(2) {
+.header.is-active .header__activeToggle > span:nth-child(2) {
   opacity: 0;
   transform: translate(-100%);
   -webkit-transform: translate(-100%);
 }
-.header.is-active .header__toggle > span:last-child {
+.header.is-active .header__activeToggle > span:last-child {
   transform: rotate(-45deg) translateY(0) translateX(0);
   -webkit-transform: rotate(-45deg) translateY(0) translateX(0);
 }
@@ -329,8 +362,13 @@ section {
 }
 .intro #course {
   color: #fc85ae;
+  text-decoration: underline;
 }
 
 .about {
+  height: 100vh;
+}
+
+.work {
   height: 100vh;
 }/*# sourceMappingURL=style.css.map */

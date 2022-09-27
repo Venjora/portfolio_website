@@ -74,6 +74,24 @@ section {
   max-width: 62.5rem;
   padding: 100px 0px;
 }
+
+// sub-heading
+.sub-heading {
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  color: $ghostWhite;
+  display: flex;
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: clamp(1rem, 4vw, 1.2rem);
+    height: 1px;
+    width: clamp(10rem, 40vw, 20rem);
+    background-color: $peach;
+    margin-left: clamp(2rem, 4vw, 3rem);
+  }
+}
+
 // Visibility
 .hide-for-mobile {
   @include breakpoint-down(medium) {
